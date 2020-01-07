@@ -136,6 +136,8 @@ body {
 }
 body .Headr {
   grid-area: header;
+  background-image: url('/img/chefs3.jpg');
+  padding: 200px;
 }
 body .MCont {
   grid-area: main;
@@ -160,4 +162,7 @@ h1 {
 p {
   font-family: 'PT Mono';
   font-size: 3rem;
+}
+#cheflg {
+  width: 100px;
 }
