@@ -1,4 +1,52 @@
 
+.fontDisp (@ffam, @fsize) {
+
+  font-family: @ffam;
+  font-size: @fsize;
+
+        
+
+}
+
+
+.SplashDisp(){
+
+  
+  display: grid;
+  grid-template-areas: 
+  
+  'sheader sheader sheader'
+  'content content content'
+  'sfooter sfooter sfooter'
+  ;
+  border: none;
+  
+  img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+  }
+
+  .splashHed {
+
+
+    position: absolute;
+    grid-area: sheader;
+
+  }
+
+
+  .splashCont {
+
+    
+
+  }
+
+}
+
 .mainDisp(){
 
 display: grid;
@@ -11,8 +59,7 @@ grid-template-areas:
 ;
 
 padding: 0;
-margin: 0;
-justify-content: center;
+
 
 
 @media @mobile {
@@ -41,6 +88,7 @@ justify-content: center;
   background-repeat: no-repeat;
   padding-top: 15%;
   padding-bottom: 25%;
+
  
   @media @mobile {
 
@@ -53,19 +101,46 @@ justify-content: center;
 .MCont2 { 
 
   
-  display: inline-flex;
+  display: inline-grid;
   grid-area: main2;
   
-}
-.Footr { grid-area: footer; }
-
-grid-template-columns: 75% auto auto auto;
-
+  
 }
 
 
 
- .MCont, section {
+ .chef, .food, .recipes, .ingredients {
+
+  grid-row-start: main2;
+  
+
+}
+
+.chef {
+
+  width: 70%;
+}
+
+.food {
+
+
+  width: 70%;
+
+}
+
+.ingredients {
+
+
+  width: 40%
+
+}
+
+
+
+
+
+
+ .MCont, .MCont2, .food, .chef, .recipes, .ingredients {
 
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.19);
@@ -73,15 +148,13 @@ grid-template-columns: 75% auto auto auto;
 
 }
 
-.fontDisp (@ffam, @fsize) {
 
-  font-family: @ffam;
-  font-size: @fsize;
 
-        
+
+
+
+.Footr { grid-area: footer; }
+
+grid-template-columns: 75% auto auto auto;
 
 }
-
-
-
-
