@@ -15,9 +15,9 @@
   display: grid;
   grid-template-areas: 
   
-  'sheader sheader sheader'
-  'content content content'
-  'sfooter sfooter sfooter'
+  'sheader  '
+  'scontent  '
+  'sfooter  '
   ;
   border: none;
   
@@ -35,20 +35,24 @@
 
     position: absolute;
     grid-area: sheader;
-
+  
   }
-
-
+  
+  
   .splashCont {
-
-    
-
-  }
+  
+    position: absolute;
+    grid-area: scontent;
+  
+  }  
 
 }
 
+
+
 .mainDisp(){
 
+  position: absolute;
 display: grid;
 grid-template-areas: 
 
@@ -109,29 +113,37 @@ padding: 0;
 
 
 
- .chef, .food, .recipes, .ingredients {
+ .chef {
 
-  grid-row-start: main2;
-  
-
-}
-
-.chef {
-
-  width: 70%;
+ background-image: url('/img/chefs2.jpg');
+ background-position: center;
+ background-size: cover;
+ 
 }
 
 .food {
 
 
-  width: 70%;
+  background-image: url('/img/food.jpg');
+  background-position: center;
+  background-size: cover;
 
 }
 
 .ingredients {
 
 
-  width: 40%
+  background-image: url('/img/ingredients.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
+
+.recipes {
+
+  background-image: url('/img/recipes.jpg');
+  background-position: center;
+  background-size: cover;
 
 }
 

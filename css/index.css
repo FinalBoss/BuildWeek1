@@ -132,6 +132,7 @@ html {
 }
 body {
   grid-template-columns: 75% auto auto auto;
+  position: absolute;
   display: grid;
   grid-template-areas: 'header header header header header header' 'main main main main main main' 'main2 main2 main2 main2  ' 'footer footer footer footer footer footer';
   padding: 0;
@@ -157,20 +158,25 @@ body .MCont2 {
   display: inline-grid;
   grid-area: main2;
 }
-body .chef,
-body .food,
-body .recipes,
-body .ingredients {
-  grid-row-start: main2;
-}
 body .chef {
-  width: 70%;
+  background-image: url('/img/chefs2.jpg');
+  background-position: center;
+  background-size: cover;
 }
 body .food {
-  width: 70%;
+  background-image: url('/img/food.jpg');
+  background-position: center;
+  background-size: cover;
 }
 body .ingredients {
-  width: 40%;
+  background-image: url('/img/ingredients.jpg');
+  background-position: center;
+  background-size: cover;
+}
+body .recipes {
+  background-image: url('/img/recipes.jpg');
+  background-position: center;
+  background-size: cover;
 }
 body .MCont,
 body .MCont2,
@@ -190,7 +196,7 @@ body .Footr {
 }
 .MSplash {
   display: grid;
-  grid-template-areas: 'sheader sheader sheader' 'content content content' 'sfooter sfooter sfooter';
+  grid-template-areas: 'sheader  ' 'scontent  ' 'sfooter  ';
   border: none;
 }
 .MSplash img {
@@ -202,6 +208,10 @@ body .Footr {
 .MSplash .splashHed {
   position: absolute;
   grid-area: sheader;
+}
+.MSplash .splashCont {
+  position: absolute;
+  grid-area: scontent;
 }
 div {
   text-align: center;
@@ -220,9 +230,6 @@ article img {
   text-align: left;
   margin-left: 50%;
 }
-section {
-  width: 100%;
-}
 h1 {
   font-family: 'Roboto Mono';
   font-size: 9rem;
@@ -231,9 +238,26 @@ p {
   font-family: 'PT Mono';
   font-size: 3rem;
 }
+button {
+  width: 30rem;
+  height: 20rem;
+}
 img {
   width: 100%;
 }
 #cheflg {
   width: 100px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li button {
+  display: block;
+  padding: 8px;
 }
