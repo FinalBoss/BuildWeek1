@@ -129,6 +129,7 @@ table {
 html {
   max-width: 1500px;
   font-size: 62.5%;
+  margin: auto;
 }
 body {
   grid-template-columns: 75% auto auto auto;
@@ -142,6 +143,7 @@ body .Headr {
   grid-area: header;
   background-image: url('/img/chefs3.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 15%;
   padding-bottom: 25%;
 }
