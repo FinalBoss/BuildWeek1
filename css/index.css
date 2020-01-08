@@ -131,6 +131,7 @@ table {
   border-spacing: 0;
 }
 html {
+  max-width: 1500px;
   font-size: 62.5%;
 }
 body {
@@ -142,13 +143,17 @@ body {
   justify-content: center;
 }
 body .Headr {
-  width: 100%;
   display: inline-block;
   grid-area: header;
   background-image: url('/img/chefs3.jpg');
   background-repeat: no-repeat;
   padding-top: 15%;
   padding-bottom: 25%;
+}
+@media '(max-width: 500px)' {
+  body .Headr {
+    width: 30%;
+  }
 }
 body .MCont {
   grid-area: main;
@@ -161,8 +166,12 @@ body .MCont2 {
 body .Footr {
   grid-area: footer;
 }
+@media '(max-width: 500px)' {
+  body {
+    grid-template-areas: 'header header header header header header' 'main2 main2 main2 main2  ' 'main main main main main main' 'footer footer footer footer footer footer';
+  }
+}
 div {
-  max-width: 100%;
   text-align: center;
   grid-gap: 10px;
   padding: 10px;
