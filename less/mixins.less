@@ -14,46 +14,65 @@
 
 .SplashDisp(){
 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
   
-  display: grid;
-  grid-template-areas: 
-  
-  'sheader  '
-  'scontent  '
-  'sfooter  '
-  ;
-  border: none;
+
   
   img {
 
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
+    
+    position: relative;
+    
+  
 
   }
 
   .splashHed {
 
+    padding: 5%;
+    position: static;
+    background-color: white;
+    width: 100%;
+    h1 {
 
-    position: absolute;
-    grid-area: sheader;
-  
+      font-size: 6.0rem;
+      
+    }
+    
   }
   
   
   .splashCont {
   
-    position: absolute;
-    grid-area: scontent;
   
+    top: 50%;
+
+    
+    h1 {
+
+      font-size: 5rem;
+      
+      
+    }
+
   }  
+
+  button:hover {
+
+    background-color: red;
+  }
 
 }
 
 
 
-.mainDisp(){
+.mainDisp(@bg){
 
   position: relative;
 display: grid;
@@ -75,13 +94,6 @@ grid-template-areas:
 }
 
 padding: 2rem;
-
-}
-
-.bodyDisp(@bg){
-
-
-  
 .Headr { 
   
   
@@ -202,8 +214,8 @@ display: none;
 
 }
 
-
 }
+
 
 
   

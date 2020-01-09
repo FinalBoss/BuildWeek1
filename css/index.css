@@ -137,6 +137,13 @@ body {
   grid-template-areas: 'header header header header header header' 'main main main main main main' 'main2 main2 main2 main2  ' 'footer footer footer footer footer footer';
   padding: 2rem;
 }
+@media screen and (max-width: 500px) {
+  body {
+    display: flex;
+    grid-template-areas: none ;
+    padding: 0;
+  }
+}
 body .Headr {
   display: inline-block;
   grid-area: header;
@@ -207,12 +214,11 @@ body .Footr {
 }
 @media screen and (max-width: 500px) {
   body {
-    display: flex;
-    grid-template-areas: none ;
-    padding: 0;
+    position: relative;
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'main main main main main main' 'main2 main2 main2 main2  ' 'footer footer footer footer footer footer';
+    padding: 2rem;
   }
-}
-@media screen and (max-width: 500px) {
   body .Headr {
     display: inline-block;
     grid-area: header;
@@ -272,6 +278,13 @@ body .Footr {
   }
 }
 @media screen and (max-width: 500px) and screen and (max-width: 500px) {
+  body {
+    display: flex;
+    grid-template-areas: none ;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 500px) and screen and (max-width: 500px) {
   body .Headr {
     padding-top: 0;
     padding-bottom: 0;
@@ -283,23 +296,34 @@ body .Footr {
   }
 }
 .MSplash {
-  display: grid;
-  grid-template-areas: 'sheader  ' 'scontent  ' 'sfooter  ';
-  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
 }
 .MSplash img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
+  position: relative;
 }
 .MSplash .splashHed {
-  position: absolute;
-  grid-area: sheader;
+  padding: 5%;
+  position: static;
+  background-color: white;
+  width: 100%;
+}
+.MSplash .splashHed h1 {
+  font-size: 6rem;
 }
 .MSplash .splashCont {
-  position: absolute;
-  grid-area: scontent;
+  top: 50%;
+}
+.MSplash .splashCont h1 {
+  font-size: 5rem;
+}
+.MSplash button:hover {
+  background-color: red;
 }
 div {
   grid-gap: 10px;
@@ -341,6 +365,8 @@ h1 {
   font-family: 'Roboto Mono';
   font-size: 9rem;
   color: tan;
+  text-shadow: 2px 5px black;
+  text-decoration: underline;
 }
 @media screen and (max-width: 500px) {
   h1 {
