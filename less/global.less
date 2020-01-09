@@ -3,20 +3,27 @@
 
 html {
 
-    max-width: 1500px;
+    max-width: 1000px;
+
     font-size: 62.5%;
     margin: auto;
-   
-    
 
+    
     
 }
 
 body {
 
 
-.bodyDisp();
+.bodyDisp(@bgImg);
 .mainDisp();
+
+
+@media screen  and (max-width: 500px){
+
+    .bodyDisp(none)
+    
+}
 
 }
 
@@ -30,12 +37,26 @@ body {
 div {
 
 
-   text-align: center;
     grid-gap: 10px;
 padding: 10px;
-border: 1px solid grey;
+border: 5px solid rgb(202, 202, 202);
+background-color: brown;
+text-align: center;
+
+@media screen and (max-width: 500px){
+    
+    grid-gap: 0;
+    padding: 0;
 
 }
+
+
+}
+
+
+
+
+
 
 div #searchbar {
 
@@ -47,6 +68,14 @@ article img {
     width: 40%;
     float: left;
 
+       
+    @media screen and (max-width: 500px){
+        
+        Width: 0;
+        float: none;
+
+    }
+
 }
 
 .content {
@@ -54,7 +83,16 @@ article img {
     text-align: left;
     margin-left: 50%;
 
+    @media screen and (max-width: 500px){
+
+        text-align: center;
+        margin-left: 0;
+        
+    }
+
 }
+
+
 
 
 
@@ -65,16 +103,51 @@ article img {
 h1 {
 
     .fontDisp (@headerfam, 9rem);
+
+
+    @media screen  and (max-width: 500px){
+
+
+        .fontDisp (@headerfam, 6rem);
+
+        
+
+
+    }
 }
 
 p {
 
     .fontDisp (@fontfam, @fontsize);
 
+    @media screen  and (max-width: 500px){
+
+
+        .fontDisp (@headerfam, 2.5rem);
+
+        
+
+
+    }
+
+}
+
+.contDesc p {
+
+    .fontDisp (@fontfam, 1.9rem);
+    text-align: left;
+    text-indent: 6rem;
+   
+    @media screen and (max-width: 500px){
+        
+        text-indent: 0;
+
+    }    
+
 }
 
 
-//Buttons, images
+//Buttons, images, links
 
 
 button {
@@ -82,11 +155,27 @@ button {
     width: 30rem;
     height: 20rem;
 
+    @media screen  and (max-width: 500px){
+
+        width: 50rem;
+        height: 5rem;
+      
+
+
+    }
+
 }
 
 img {
 
     width: 100%;
+
+    @media screen and (max-width: 500px){
+        
+        width: 0;
+
+    }
+ 
 }
 
 #cheflg {
@@ -95,10 +184,25 @@ img {
 
 }
     
+#cheflg2 {
 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
 
  
- 
+ a {
+
+    
+    .fontDisp (@fontfam, 2.3rem);
+    padding: 5%;
+    text-decoration: none;
+    color: black;
+
+
+ }
    
 
 

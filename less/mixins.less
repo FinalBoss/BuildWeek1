@@ -1,10 +1,13 @@
 
+
+
 .fontDisp (@ffam, @fsize) {
 
   font-family: @ffam;
   font-size: @fsize;
+  color: tan;
 
-        
+
 
 }
 
@@ -52,7 +55,7 @@
 
 .mainDisp(){
 
-  position: absolute;
+  position: relative;
 display: grid;
 grid-template-areas: 
 
@@ -62,25 +65,20 @@ grid-template-areas:
 'footer footer footer footer footer footer'
 ;
 
-padding: 0;
+@media screen and (max-width: 500px) {
 
-
-
-@media @mobile {
-
-  grid-template-areas: 
-
-'header header header header header header'
-'main2 main2 main2 main2  '
-'main main main main main main'
-'footer footer footer footer footer footer'
-;
+  display: flex;
+  grid-template-areas: none ;
+   
+  padding: 0;
 
 }
 
+padding: 2rem;
+
 }
 
-.bodyDisp(){
+.bodyDisp(@bg){
 
 
   
@@ -89,20 +87,33 @@ padding: 0;
   
   display: inline-block;
   grid-area: header;
-  background-image: url('/img/chefs3.jpg');
+  background-image: @bg;
   background-repeat: no-repeat;
   background-size: cover;
+
   padding-top: 15%;
   padding-bottom: 25%;
+  margin: auto;
+  border: none;
 
- 
-  @media @mobile {
 
-    width: 30%;
+  @media screen and (max-width: 500px){
+    
+   
+padding-top: 0;
+padding-bottom: 0;
 
   }
 
+ 
+
+
+ 
+ 
+
 }
+
+
 .MCont { grid-area: main; display: inline-block;}
 .MCont2 { 
 
@@ -113,6 +124,24 @@ padding: 0;
   
 }
 
+div .MCont, .MCont2 {
+
+background-color: white;
+
+}
+
+
+.MCont img  {
+
+
+@media screen and (max-width: 500px) {
+  
+display: none;
+
+}
+
+
+}
 
 
  .chef {
@@ -147,6 +176,7 @@ padding: 0;
   background-position: center;
   background-size: cover;
 
+
 }
 
 
@@ -154,21 +184,27 @@ padding: 0;
 
 
 
- .MCont, .MCont2, .food, .chef, .recipes, .ingredients {
+ .Headr,.MCont, .MCont2, .food, .chef, .recipes, .ingredients {
 
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.19);
+    border: none;
 
 
 }
 
 
 
+.Footr {
 
-
-
-.Footr { grid-area: footer; }
-
-grid-template-columns: 75% auto auto auto;
+  grid-area: footer;
+  margin: auto;
 
 }
+
+
+}
+
+
+  
+

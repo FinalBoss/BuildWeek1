@@ -127,16 +127,15 @@ table {
   border-spacing: 0;
 }
 html {
-  max-width: 1500px;
+  max-width: 1000px;
   font-size: 62.5%;
   margin: auto;
 }
 body {
-  grid-template-columns: 75% auto auto auto;
-  position: absolute;
+  position: relative;
   display: grid;
   grid-template-areas: 'header header header header header header' 'main main main main main main' 'main2 main2 main2 main2  ' 'footer footer footer footer footer footer';
-  padding: 0;
+  padding: 2rem;
 }
 body .Headr {
   display: inline-block;
@@ -146,10 +145,13 @@ body .Headr {
   background-size: cover;
   padding-top: 15%;
   padding-bottom: 25%;
+  margin: auto;
+  border: none;
 }
-@media '(max-width: 500px)' {
+@media screen and (max-width: 500px) {
   body .Headr {
-    width: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 body .MCont {
@@ -159,6 +161,15 @@ body .MCont {
 body .MCont2 {
   display: inline-grid;
   grid-area: main2;
+}
+body div .MCont,
+body .MCont2 {
+  background-color: white;
+}
+@media screen and (max-width: 500px) {
+  body .MCont img {
+    display: none;
+  }
 }
 body .chef {
   background-image: url('/img/chefs2.jpg');
@@ -180,6 +191,7 @@ body .recipes {
   background-position: center;
   background-size: cover;
 }
+body .Headr,
 body .MCont,
 body .MCont2,
 body .food,
@@ -187,13 +199,87 @@ body .chef,
 body .recipes,
 body .ingredients {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.19);
+  border: none;
 }
 body .Footr {
   grid-area: footer;
+  margin: auto;
 }
-@media '(max-width: 500px)' {
+@media screen and (max-width: 500px) {
   body {
-    grid-template-areas: 'header header header header header header' 'main2 main2 main2 main2  ' 'main main main main main main' 'footer footer footer footer footer footer';
+    display: flex;
+    grid-template-areas: none ;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .Headr {
+    display: inline-block;
+    grid-area: header;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15%;
+    padding-bottom: 25%;
+    margin: auto;
+    border: none;
+  }
+  body .MCont {
+    grid-area: main;
+    display: inline-block;
+  }
+  body .MCont2 {
+    display: inline-grid;
+    grid-area: main2;
+  }
+  body div .MCont,
+  body .MCont2 {
+    background-color: white;
+  }
+  body .chef {
+    background-image: url('/img/chefs2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  body .food {
+    background-image: url('/img/food.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  body .ingredients {
+    background-image: url('/img/ingredients.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  body .recipes {
+    background-image: url('/img/recipes.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  body .Headr,
+  body .MCont,
+  body .MCont2,
+  body .food,
+  body .chef,
+  body .recipes,
+  body .ingredients {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 2px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+  }
+  body .Footr {
+    grid-area: footer;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) and screen and (max-width: 500px) {
+  body .Headr {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) and screen and (max-width: 500px) {
+  body .MCont img {
+    display: none;
   }
 }
 .MSplash {
@@ -216,10 +302,17 @@ body .Footr {
   grid-area: scontent;
 }
 div {
-  text-align: center;
   grid-gap: 10px;
   padding: 10px;
-  border: 1px solid grey;
+  border: 5px solid #cacaca;
+  background-color: brown;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  div {
+    grid-gap: 0;
+    padding: 0;
+  }
 }
 div #searchbar {
   float: right;
@@ -228,27 +321,92 @@ article img {
   width: 40%;
   float: left;
 }
+@media screen and (max-width: 500px) {
+  article img {
+    Width: 0;
+    float: none;
+  }
+}
 .content {
   text-align: left;
   margin-left: 50%;
 }
+@media screen and (max-width: 500px) {
+  .content {
+    text-align: center;
+    margin-left: 0;
+  }
+}
 h1 {
   font-family: 'Roboto Mono';
   font-size: 9rem;
+  color: tan;
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-family: 'Roboto Mono';
+    font-size: 6rem;
+    color: tan;
+  }
 }
 p {
   font-family: 'PT Mono';
   font-size: 3rem;
+  color: tan;
+}
+@media screen and (max-width: 500px) {
+  p {
+    font-family: 'Roboto Mono';
+    font-size: 2.5rem;
+    color: tan;
+  }
+}
+.contDesc p {
+  font-family: 'PT Mono';
+  font-size: 1.9rem;
+  color: tan;
+  text-align: left;
+  text-indent: 6rem;
+}
+@media screen and (max-width: 500px) {
+  .contDesc p {
+    text-indent: 0;
+  }
 }
 button {
   width: 30rem;
   height: 20rem;
 }
+@media screen and (max-width: 500px) {
+  button {
+    width: 50rem;
+    height: 5rem;
+  }
+}
 img {
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  img {
+    width: 0;
+  }
+}
 #cheflg {
   width: 100px;
+}
+#cheflg2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+a {
+  font-family: 'PT Mono';
+  font-size: 2.3rem;
+  color: tan;
+  padding: 5%;
+  text-decoration: none;
+  color: black;
 }
 ul {
   list-style-type: none;
@@ -259,7 +417,45 @@ ul {
 li {
   float: left;
 }
+@media screen and (max-width: 500px) {
+  li {
+    float: none;
+  }
+}
 li button {
   display: block;
   padding: 8px;
+}
+@media screen and (max-width: 500px) {
+  li button {
+    padding: 0;
+  }
+}
+.copyrighto {
+  text-align: left;
+}
+.dma {
+  margin: auto;
+  text-align: right;
+  border: none;
+}
+#headr1,
+#mobilehed {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  #headr1,
+  #mobilehed {
+    display: block;
+  }
+}
+#headr2,
+#desktophed {
+  display: block;
+}
+@media screen and (max-width: 500px) {
+  #headr2,
+  #desktophed {
+    display: none;
+  }
 }
